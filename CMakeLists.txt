@@ -630,4 +630,6 @@ endif ()
 
 # The test suite -- split into a separate file because it's rather large.
 # N.B. Many of the tests fail with GEOGRAPHICLIB_PRECISION = 1 (float).
-include (tools/tests.cmake)
+if (GEOGRAPHICLIB_BUILD_TESTS)
+    include (tools/tests.cmake)
+endif()
